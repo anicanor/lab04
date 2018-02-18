@@ -2,8 +2,9 @@
 //Aaron Nicanor
 //anicanor
 #include <iostream>
-using namespace std;
 #include "list.h"
+
+using namespace std;
 
 // on some machines member variables are not automatically initialized to 0
 List::List()
