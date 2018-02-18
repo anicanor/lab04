@@ -8,15 +8,11 @@ using namespace std;
 
 int main(){
 
+        //Delcares some variables
         int input; 
-
-        // instantiate a List class (the constructor takes NO arguments)
         List list;
 
-        // NOTE:
-        // List list();  is incorrect, when there are no arguments don't use ()
-
-        // insert numbers into the list
+        // Insert numbers into the list
         while(cin >> input)
         {
                 
