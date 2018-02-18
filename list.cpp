@@ -1,3 +1,6 @@
+//list.cpp
+//Aaron Nicanor
+//anicanor
 #include <iostream>
 using namespace std;
 #include "list.h"
@@ -14,16 +17,19 @@ List::List()
 // Rule of thumb: destructor deletes all memory created by member functions
 List::~List()
 {
+        
         // cout << "List::~List() was called" << endl;
 
         Node *ptr = m_head;
         while (ptr != NULL)
         {
+                
                 Node *temp;
 
                 temp = ptr;
                 ptr = ptr->m_next;
                 delete temp;
+                
         }
 }
 
@@ -31,17 +37,22 @@ List::~List()
 // Note: this works even in the SPECIAL CASE that the list is empty
 void List::insert(int value)
 {
+       
         m_head = new Node(value, m_head);
+        
 }
 
 // iterate through all the Nodes in the list and print each Node
 void List::print()
 {
+ 
         Node *ptr = m_head; 
         while (ptr != NULL)
         {
+               
                 cout << ptr->m_value << endl; 
                 ptr = ptr->m_next;
+                
         }
 
         /* The following is the same as the above loop
@@ -50,10 +61,12 @@ void List::print()
            cout << ptr->m_value << endl; 
            }
          */
+        
 }
 
 int List::sum()
 {
+   
         int sum = 0;
 
         Node *ptr = m_head;
@@ -63,11 +76,13 @@ int List::sum()
                 ptr = ptr->m_next;
         }
 
+ 
         return sum;
 }
 
 void List::insert_at_end(int value)
 {
+   
         Node *ptr = m_head;
         if (m_head == NULL)
         {
@@ -81,5 +96,7 @@ void List::insert_at_end(int value)
                         ptr = ptr->m_next;
                 }
                 ptr->m_next = new Node(value, NULL);
+     
         }
+
 }
