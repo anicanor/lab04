@@ -1,3 +1,6 @@
+//list.h
+//Aaron Nicanor
+//anicanor
 // demonstrate a simple linked-list of integers
 #ifndef LIST_H
 #define LIST_H
@@ -14,6 +17,7 @@ class List
     private:
         class Node
         {
+            
             public:
                 // small functions can be inserted into the class definition
                 // don't put large functions in the class definition
@@ -21,8 +25,10 @@ class List
                 {m_value = value; m_next = next;}
                 int m_value;
                 Node *m_next;
+            
         };
         Node *m_head;
+    
 };
 
 #endif
