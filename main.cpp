@@ -1,10 +1,14 @@
+//main.cpp
+//Aaron Nicanor
+//anicanor
 #include <iostream>
-using namespace std;
 #include "list.h"
+
+using namespace std;
 
 int main(){
 
-        int value; 
+        int input; 
 
         // instantiate a List class (the constructor takes NO arguments)
         List list;
@@ -13,14 +17,16 @@ int main(){
         // List list();  is incorrect, when there are no arguments don't use ()
 
         // insert numbers into the list
-        while(cin >> value)
+        while(cin >> input)
         {
-                list.insert_at_end(value);
+                
+                list.insert_at_end(input);
+                
         }
 
         list.print();
         cout << "sum = " << list.sum() << endl;
 
-
         return 0;
+        
 }
